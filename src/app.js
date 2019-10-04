@@ -16,6 +16,8 @@ const services = require('./services');
 const appHooks = require('./app.hooks');
 const channels = require('./channels');
 
+const mongoose = require('./mongoose');
+
 const app = express(feathers());
 
 // Load app configuration
@@ -29,6 +31,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(favicon(path.join(app.get('public'), 'favicon.ico')));
 // Host the public folder
 app.use('/', express.static(app.get('public')));
+
+app.configure(mongoose);
 
 // Set up Plugins and providers
 

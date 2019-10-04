@@ -1,12 +1,14 @@
 // Initializes the `issues` service on path `/issues`
 const { Issues } = require('./issues.class');
+const createModel = require('../../models/issues.model');
 const hooks = require('./issues.hooks');
 
 module.exports = function (app) {
-  
+  const Model = createModel(app);
   const paginate = app.get('paginate');
 
   const options = {
+    Model,
     paginate
   };
 

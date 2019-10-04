@@ -5,5 +5,6 @@
   "paginate": {
     "default": 10,
     "max": 50
-  }
+  },
+  "mongodb": "mongodb://feathers_mongoose_patch_issue:secret@localhost:27017/feathers_mongoose_patch_issue"
 }

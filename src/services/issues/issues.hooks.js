@@ -1,10 +1,8 @@
-const {
-  softDelete2
-} = require('feathers-hooks-common');
+
 
 module.exports = {
   before: {
-    all: [softDelete2()],
+    all: [],
     find: [],
     get: [],
     create: [],
@@ -14,7 +12,7 @@ module.exports = {
   },
 
   after: {
-    all: [softDelete2()],
+    all: [],
     find: [],
     get: [],
     create: [],
