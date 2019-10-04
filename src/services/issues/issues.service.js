@@ -1,5 +1,7 @@
 // Initializes the `issues` service on path `/issues`
-const { Issues } = require('./issues.class');
+const {
+  Issues
+} = require('./issues.class');
 const createModel = require('../../models/issues.model');
 const hooks = require('./issues.hooks');
 
@@ -9,7 +11,8 @@ module.exports = function (app) {
 
   const options = {
     Model,
-    paginate
+    paginate,
+    multi: true
   };
 
   // Initialize our service with any options it requires
